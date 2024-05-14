@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:paddingTop="10dp"
+    android:orientation="horizontal">
+    <LinearLayout
+
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/scanCodeTextView"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Scan Code"
+            android:textSize="12sp"
+            android:textColor="#0AABEA"
+            android:padding="8dp" android:layout_width="wrap_content"/>
+        <TextView
+        android:id="@+id/partnoTextView"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="partno"
+            android:textSize="12sp"
+        android:textColor="#0AABEA"
+        android:padding="8dp"
+            android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/minMaxAmcTextView"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Min/Maxx/AMC"
+            android:layout_marginRight="15dp"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:padding="8dp" android:layout_width="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/shipQtyTextView"
+            android:text="Ship Qty"
+            android:layout_height="wrap_content"
+       android:layout_marginLeft="13dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textColor="#0AABEA"
+            android:padding="8dp" android:layout_width="wrap_content"/>
+        <TextView
+            android:id="@+id/shipDtTextView"
+            android:text="Ship Dt"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:textSize="12sp"
+            android:textColor="#0AABEA"
+            android:padding="8dp"
+            android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/orderQtyTextView"
+            android:text="Order Qty"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_marginRight="13dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#0AABEA"
+            android:padding="8dp" android:layout_width="wrap_content"/>
+        <TextView
+            android:id="@+id/orderDtyTextView"
+            android:text="Order DT"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#0AABEA"
+            android:padding="8dp"
+            android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/onhandQty1TextView"
+            android:text="On Hand Qty1"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:background="@drawable/acfr_shape"
+            android:layout_width="match_parent"/>
+        <TextView
+            android:id="@+id/onhandQty2TextView"
+            android:text="On Hand Qty2"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textColor="#0AABEA"
+            android:padding="8dp"
+
+            android:layout_width="match_parent"/>
+        <TextView
+            android:id="@+id/lastscanDateTextView"
+            android:text="Lastscan date"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"            android:textColor="@color/black"
+            android:padding="8dp"
+            android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

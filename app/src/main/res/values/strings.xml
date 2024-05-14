@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Boeing Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="use_face_id_to_login">Use Face ID to login</string>
+    <string name="_15"><![CDATA[<=15]]></string>
+    <string name="_30"><![CDATA[>30]]></string>
+</resources>

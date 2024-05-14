@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+android:background="@drawable/bg_one"
+
+    tools:context=".main_activitys.Login_Activity"
+    tools:ignore="ExtraText">
+
+
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="100dp"
+       android:src="@drawable/title"
+      android:layout_marginTop="20dp"
+       />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:gravity="center_horizontal"
+        android:text="@string/use_face_id_to_login"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="italic"
+        android:layout_gravity="center_horizontal"
+       android:layout_marginTop="40dp"
+      />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/fac"
+
+        android:layout_gravity="center_horizontal"
+    />
+    </LinearLayout>
+<TextView
+    android:paddingTop="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Or Enter Username and Password"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="150dp"
+    android:textColor="@color/white"
+    android:textSize="13dp"
+    android:textStyle="italic"
+    android:paddingBottom="8dp"
+    />
+    <EditText
+
+        android:id="@+id/username"
+        android:layout_width="290dp"
+        android:layout_height="42dp"
+        android:background="@drawable/shape"
+        android:textColor="@color/black"
+        android:hint="UserName"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+
+        android:textColorHint="#C8C4CD"
+        android:layout_gravity="center_horizontal"
+android:layout_marginBottom="12dp"
+        />
+    <EditText
+
+        android:id="@+id/password"
+        android:layout_width="290dp"
+        android:layout_height="42dp"
+        android:textColor="@color/black"
+        android:background="@drawable/shape"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:paddingLeft="15dp"
+
+        android:textColorHint="#C8C4CD"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/login_button"
+android:drawableLeft="@drawable/arrow"
+        android:padding="25dp"
+        app:backgroundTint="#ffff" />
+
+    <TextView
+        android:id="@+id/trouble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Having trouble logging in?"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="12dp"
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="50dp"
+    android:layout_marginRight="20dp"
+
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Privacy Policy"
+        android:textColor="@color/white"
+
+        android:paddingLeft="80dp"
+        android:textSize="11dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terms Of Use"
+        android:textColor="@color/white"
+        android:paddingLeft="100dp"
+        android:textSize="11dp"
+        />
+</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="11dp"
+        android:gravity="center_horizontal"
+        android:text="Test app version - 4.1.0 (https:/bdsci-stg1-store.pivotree.io)"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="11dp"
+        android:text="Copyright © 2024 Boeing. All rights reserved. Boeing Proprietary"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        />
+</LinearLayout>

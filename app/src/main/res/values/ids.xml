@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="partnoTextView" type="id" />
+    <item name="scanCodeTextView" type="id" />
+    <item name="minMaxAmcTextView" type="id" />
+    <item name="shipQtyTextView" type="id" />
+    <item name="shipDtTextView" type="id" />
+    <item name="orderQtyTextView" type="id" />
+    <item name="orderDtyTextView" type="id" />
+    <item name="onhandQty1TextView" type="id" />
+    <item name="onhandQty2TextView" type="id" />
+    <item name="lastscanDateTextView" type="id" />
+</resources>

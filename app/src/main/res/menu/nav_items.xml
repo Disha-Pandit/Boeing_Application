@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:id="@+id/bin"
+    android:title="Bin"
+    android:icon="@drawable/home_icon"
+    />
+    <item android:id="@+id/chemical"
+        android:title="Chemical"
+        android:icon="@drawable/flask"
+        />
+    <item android:id="@+id/kit"
+        android:title="Kit"
+        android:icon="@drawable/briefcase_icon"
+        />
+    <item android:id="@+id/setting"
+
+        android:title="Settings"
+        android:icon="@drawable/settings_icon"
+        />
+
+</menu>
