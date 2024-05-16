@@ -52,12 +52,7 @@ BottomNavigationView bnView;
             }
         });
 
-
-
-
-
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
@@ -65,16 +60,6 @@ BottomNavigationView bnView;
         List<SettingItem> settingItemList = createSettingItemList();
         SettingAdapter adapter1 = new SettingAdapter(settingItemList);
         recyclerView.setAdapter(adapter1);
-
-
-
-
-
-
-
-
-
-
 
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
