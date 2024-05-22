@@ -72,7 +72,7 @@ public class Select_Customer {
         users.add("0010607788 - AIRBUS OPERATIONS GMBH AIRBUS-A");
         users.add("0010607223 - ADAMS COMMUNICATION & ENGINEER ADAMS COMM");
         users.add("0010607297 - LEONARDO SPA LEONARDO S");
-        users.add("0010607788 - AIRBUS OPERATIONS GMBH AIRBUS-A");
+        users.add("0010607789 - AIRBUS OPERATIONS GMBH AIRBUS-A");
         return users;
     }
 }
