@@ -18,8 +18,8 @@ public class Login_Activity extends AppCompatActivity {
     EditText edusername,edpassword;
     Button button;
     TextView trouble;
-Button login;
-Intent intent;
+    Button login;
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,23 +28,23 @@ Intent intent;
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         Button button = findViewById(R.id.login);
-edusername=findViewById(R.id.username);
+        edusername=findViewById(R.id.username);
         edpassword=findViewById(R.id.password);
-button.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        intent = new Intent(getApplicationContext(), Bin_Activity.class);
-        startActivity(intent);
-    }
-});
-trouble=findViewById(R.id.trouble);
-trouble.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent=new Intent(getApplicationContext(), Create_Account_Activity.class);
-        startActivity(intent);
-    }
-});
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(getApplicationContext(), Bin_Activity.class);
+                startActivity(intent);
+            }
+        });
+        trouble=findViewById(R.id.trouble);
+        trouble.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), Create_Account_Activity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

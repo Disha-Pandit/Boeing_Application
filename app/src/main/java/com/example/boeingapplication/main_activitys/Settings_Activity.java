@@ -1,5 +1,7 @@
 package com.example.boeingapplication.main_activitys;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,6 +9,7 @@ import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,10 +29,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Settings_Activity extends AppCompatActivity {
-BottomNavigationView bnView;
+    BottomNavigationView bnView;
     ImageView imageView;
-    Intent intent;
     private static final int REQUEST_PICK_IMAGE = 1;
+    private RecyclerView recyclerView;
+    private static SettingAdapter adapter1;
+    private static List<SettingItem> settingItemList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,18 +52,16 @@ BottomNavigationView bnView;
         txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(getApplicationContext(), Login_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), Login_Activity.class);
                 startActivity(intent);
             }
         });
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
-
+        recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        List<SettingItem> settingItemList = createSettingItemList();
-        SettingAdapter adapter1 = new SettingAdapter(settingItemList);
+        settingItemList = createSettingItemList();
+        adapter1 = new SettingAdapter(settingItemList,this);
         recyclerView.setAdapter(adapter1);
 
         View decorView = getWindow().getDecorView();
@@ -74,7 +77,6 @@ BottomNavigationView bnView;
                 int id = item.getItemId();
 
                 if (id == R.id.chemical) {
-
                     intent = new Intent(getApplicationContext(), Chemical_Activity.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.slide_out_right);
@@ -101,8 +103,6 @@ BottomNavigationView bnView;
 
         });
     }
-
-
     //open gallery method
     private void openGallery() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -119,13 +119,8 @@ BottomNavigationView bnView;
 
         }
     }
-
-
-
-
     @Override
     public void onBackPressed() {
-
         super.onBackPressed();
         Intent intent = new Intent(this, Login_Activity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -136,11 +131,6 @@ BottomNavigationView bnView;
 
     private void overridePendingTransition(int slideOutRight) {
     }
-
-
-
-
-
 
     private List<SettingItem> createSettingItemList() {
         List<SettingItem> settingItemList = new ArrayList<>();
@@ -155,6 +145,27 @@ BottomNavigationView bnView;
         settingItemList.add(new SettingItem(R.drawable.icon8, "EU Data Privacy Notice",R.drawable.ar));
         settingItemList.add(new SettingItem(R.drawable.icon9, "Terms of Use",R.drawable.ar));
         return settingItemList;
+    }
+
+    private void showSelectCustomerDialog() {
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.activity_customer_dialog);
+        RecyclerView recyclerViewCustomer = dialog.findViewById(R.id.recyclerViewcustomer);
+        EditText editTextSearch = dialog.findViewById(R.id.editTextSearch);
+        ImageView imageViewClear = dialog.findViewById(R.id.imageViewClear);
+        TextView buttondone=dialog.findViewById(R.id.buttonDone);
+        TextView buttonCancel = dialog.findViewById(R.id.buttonCancel);
+        Select_Customer.initRecyclerView(this, recyclerViewCustomer, editTextSearch,buttondone,dialog,buttonCancel);
+        dialog.show();
+
+    }
+
+    public static void updateSettingItem(String user) {
+        if (settingItemList != null && settingItemList.size() >= 3) {
+            settingItemList.get(2).setText(user);
+            adapter1.notifyItemChanged(2);
+
+        }
     }
 }
 

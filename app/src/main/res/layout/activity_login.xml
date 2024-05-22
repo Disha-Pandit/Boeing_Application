@@ -65,10 +65,9 @@ android:background="@drawable/bg_one"
         android:hint="UserName"
         android:inputType="text"
         android:paddingLeft="15dp"
-
         android:textColorHint="#C8C4CD"
         android:layout_gravity="center_horizontal"
-android:layout_marginBottom="12dp"
+        android:layout_marginBottom="12dp"
         />
     <EditText
 
