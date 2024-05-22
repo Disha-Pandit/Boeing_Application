@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    tools:context=".main_activitys.Acfr_Activity">
+    tools:context=".main_activitys.AcfrActivity">
 
 
     <LinearLayout

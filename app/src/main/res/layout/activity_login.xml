@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
 android:background="@drawable/bg_one"
 
-    tools:context=".main_activitys.Login_Activity"
+    tools:context=".main_activitys.LoginActivity"
     tools:ignore="ExtraText">
 
 

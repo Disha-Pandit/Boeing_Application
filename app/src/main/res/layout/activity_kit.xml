@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDFFFFFF"
-    tools:context=".main_activitys.Kit_Activity">
+    tools:context=".main_activitys.KitActivity">
     <TextView
         android:id="@+id/binManagementTitle"
         android:layout_width="match_parent"

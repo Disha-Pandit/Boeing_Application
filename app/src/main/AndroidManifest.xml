@@ -15,24 +15,24 @@
         android:theme="@style/Theme.BoeingApplication"
         tools:targetApi="31">
         <activity
-            android:name=".main_activitys.Select_Customer"
+            android:name=".main_activitys.SelectCustomer"
             android:exported="true" >
 
         </activity>
         <activity
-            android:name=".main_activitys.Change_Password"
+            android:name=".main_activitys.ChangePassword"
             android:exported="true" />
         <activity
-            android:name=".main_activitys.Acfr_Activity"
+            android:name=".main_activitys.AcfrActivity"
             android:exported="true" />
         <activity
             android:name=".main_activitys.BinCenters"
             android:exported="true" />
         <activity
-            android:name=".main_activitys.Create_Account_Activity"
+            android:name=".main_activitys.CreateAccountActivity"
             android:exported="true" />
         <activity
-            android:name=".main_activitys.Login_Activity"
+            android:name=".main_activitys.LoginActivity"
             android:exported="true"
             android:launchMode="singleTask">
             <intent-filter>
@@ -41,16 +41,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".main_activitys.Kit_Activity"
+            android:name=".main_activitys.KitActivity"
             android:exported="true" />
         <activity
-            android:name=".main_activitys.Settings_Activity"
+            android:name=".main_activitys.SettingsActivity"
             android:exported="true" />
         <activity
-            android:name=".main_activitys.Bin_Activity"
+            android:name=".main_activitys.BinActivity"
             android:exported="true" />
         <activity
-            android:name=".main_activitys.Chemical_Activity"
+            android:name=".main_activitys.ChemicalActivity"
             android:exported="true" />
         <activity
             android:name=".main_activitys.MainActivity"

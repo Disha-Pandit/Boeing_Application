@@ -11,10 +11,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.boeingapplication.R;
-import com.example.boeingapplication.main_activitys.Bin_Activity;
-import com.example.boeingapplication.main_activitys.Create_Account_Activity;
 
-public class Login_Activity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     EditText edusername,edpassword;
     Button button;
     TextView trouble;
@@ -33,7 +31,7 @@ public class Login_Activity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(getApplicationContext(), Bin_Activity.class);
+                intent = new Intent(getApplicationContext(), BinActivity.class);
                 startActivity(intent);
             }
         });
@@ -41,7 +39,7 @@ public class Login_Activity extends AppCompatActivity {
         trouble.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), Create_Account_Activity.class);
+                Intent intent=new Intent(getApplicationContext(), CreateAccountActivity.class);
                 startActivity(intent);
             }
         });

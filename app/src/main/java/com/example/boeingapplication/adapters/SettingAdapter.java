@@ -16,9 +16,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.boeingapplication.main_activitys.Change_Password;
+import com.example.boeingapplication.main_activitys.ChangePassword;
 import com.example.boeingapplication.R;
-import com.example.boeingapplication.main_activitys.Select_Customer;
+import com.example.boeingapplication.main_activitys.SelectCustomer;
 import com.example.boeingapplication.model.SettingItem;
 
 import java.util.List;
@@ -65,7 +65,7 @@ public class SettingAdapter extends RecyclerView.Adapter<SettingAdapter.SettingV
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context, Change_Password.class);
+                    Intent intent = new Intent(context, ChangePassword.class);
                     context.startActivity(intent);
                 }
             });
@@ -80,7 +80,7 @@ public class SettingAdapter extends RecyclerView.Adapter<SettingAdapter.SettingV
                 ImageView imageViewClear = dialog.findViewById(R.id.imageViewClear);
                 TextView done=dialog.findViewById(R.id.buttonDone);
                 TextView cancel=dialog.findViewById(R.id.buttonCancel);
-                Select_Customer.initRecyclerView(dialog.getContext(), recyclerView, editTextSearch,done,dialog,cancel);
+                SelectCustomer.initRecyclerView(dialog.getContext(), recyclerView, editTextSearch,done,dialog,cancel);
                 editTextSearch.addTextChangedListener(new android.text.TextWatcher() {
                     @Override
                     public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -103,7 +103,7 @@ public class SettingAdapter extends RecyclerView.Adapter<SettingAdapter.SettingV
                 layoutParams.gravity = Gravity.CENTER;
                 RecyclerView recyclerView1 = dialog.findViewById(R.id.recyclerViewcustomer);
                 EditText searchInput = dialog.findViewById(R.id.editTextSearch);
-                Select_Customer.initRecyclerView(dialog.getContext(), recyclerView1, searchInput,done,dialog,cancel);
+                SelectCustomer.initRecyclerView(dialog.getContext(), recyclerView1, searchInput,done,dialog,cancel);
                 dialog.show();
                 dialog.getWindow().setAttributes(layoutParams); // Apply the new attributes
                 dialog.setCanceledOnTouchOutside(false);

@@ -8,9 +8,8 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.boeingapplication.R;
-import com.google.android.material.navigation.NavigationBarView;
 
-public class Create_Account_Activity extends AppCompatActivity {
+public class CreateAccountActivity extends AppCompatActivity {
 Button create;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -28,23 +28,23 @@ public class MainActivity extends AppCompatActivity {
 
                if (id == R.id.chemical) {
                    // Start the MenuActivity
-                   intent = new Intent(getApplicationContext(), Chemical_Activity.class);
+                   intent = new Intent(getApplicationContext(), ChemicalActivity.class);
                    startActivity(intent);
                    overridePendingTransition(android.R.anim.slide_out_right);
                    return true;
                } else if (id == R.id.bin) {
-                   intent = new Intent(getApplicationContext(), Bin_Activity.class);
+                   intent = new Intent(getApplicationContext(), BinActivity.class);
                    startActivity(intent);
                    overridePendingTransition(android.R.anim.slide_out_right);
                    return true;
                } else if (id==R.id.setting) {
-                   intent = new Intent(getApplicationContext(), Settings_Activity.class);
+                   intent = new Intent(getApplicationContext(), SettingsActivity.class);
                    startActivity(intent);
                    overridePendingTransition(android.R.anim.slide_out_right);
                    return true;
                }
                else{
-                   intent = new Intent(getApplicationContext(), Kit_Activity.class);
+                   intent = new Intent(getApplicationContext(), KitActivity.class);
                    startActivity(intent);
                    overridePendingTransition(android.R.anim.slide_out_right);
                    return true;

@@ -13,7 +13,7 @@ import com.example.boeingapplication.decorations.BlackLineItemDecoration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Select_Customer {
+public class SelectCustomer {
     private static CustomerAdapter adapter;
     public static void initRecyclerView(Context context, RecyclerView recyclerView, EditText searchInput, TextView done, Dialog dialog, TextView cancel) {
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
@@ -38,7 +38,7 @@ public class Select_Customer {
             done.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Settings_Activity.updateSettingItem(user);
+                    SettingsActivity.updateSettingItem(user);
                     dialog.cancel();
                 }
             });

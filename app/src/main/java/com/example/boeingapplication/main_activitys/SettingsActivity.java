@@ -1,7 +1,6 @@
 package com.example.boeingapplication.main_activitys;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -28,7 +27,7 @@ import com.google.android.material.navigation.NavigationBarView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Settings_Activity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
     BottomNavigationView bnView;
     ImageView imageView;
     private static final int REQUEST_PICK_IMAGE = 1;
@@ -52,7 +51,7 @@ public class Settings_Activity extends AppCompatActivity {
         txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Login_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -77,23 +76,23 @@ public class Settings_Activity extends AppCompatActivity {
                 int id = item.getItemId();
 
                 if (id == R.id.chemical) {
-                    intent = new Intent(getApplicationContext(), Chemical_Activity.class);
+                    intent = new Intent(getApplicationContext(), ChemicalActivity.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.slide_out_right);
                     return true;
                 } else if (id == R.id.bin) {
-                    intent = new Intent(getApplicationContext(), Bin_Activity.class);
+                    intent = new Intent(getApplicationContext(), BinActivity.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.slide_out_right);
                     return true;
                 } else if (id==R.id.setting) {
-                    intent = new Intent(getApplicationContext(), Settings_Activity.class);
+                    intent = new Intent(getApplicationContext(), SettingsActivity.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.slide_out_right);
                     return true;
                 }
                 else{
-                    intent = new Intent(getApplicationContext(), Kit_Activity.class);
+                    intent = new Intent(getApplicationContext(), KitActivity.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.slide_out_right);
                     return true;
@@ -122,7 +121,7 @@ public class Settings_Activity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(this, Login_Activity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();
@@ -155,13 +154,13 @@ public class Settings_Activity extends AppCompatActivity {
         ImageView imageViewClear = dialog.findViewById(R.id.imageViewClear);
         TextView buttondone=dialog.findViewById(R.id.buttonDone);
         TextView buttonCancel = dialog.findViewById(R.id.buttonCancel);
-        Select_Customer.initRecyclerView(this, recyclerViewCustomer, editTextSearch,buttondone,dialog,buttonCancel);
+        SelectCustomer.initRecyclerView(this, recyclerViewCustomer, editTextSearch,buttondone,dialog,buttonCancel);
         dialog.show();
 
     }
 
     public static void updateSettingItem(String user) {
-        if (settingItemList != null && settingItemList.size() >= 3) {
+        if (settingItemList != null) {
             settingItemList.get(2).setText(user);
             adapter1.notifyItemChanged(2);
 

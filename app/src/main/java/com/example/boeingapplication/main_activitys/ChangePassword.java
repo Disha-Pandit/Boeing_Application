@@ -7,20 +7,15 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.boeingapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class Change_Password extends AppCompatActivity {
+public class ChangePassword extends AppCompatActivity {
     BottomNavigationView bnView;
 
     @Override
@@ -33,7 +28,7 @@ public class Change_Password extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Settings_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +37,7 @@ public class Change_Password extends AppCompatActivity {
         txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Settings_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
                 startActivity(intent);
             }
         });
@@ -71,23 +66,23 @@ public class Change_Password extends AppCompatActivity {
 
                 if (id == R.id.chemical) {
                     // Start the MenuActivity
-                    intent = new Intent(getApplicationContext(), Chemical_Activity.class);
+                    intent = new Intent(getApplicationContext(), ChemicalActivity.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.slide_out_right);
                     return true;
                 } else if (id == R.id.bin) {
-                    intent = new Intent(getApplicationContext(), Bin_Activity.class);
+                    intent = new Intent(getApplicationContext(), BinActivity.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.slide_out_right);
                     return true;
                 } else if (id==R.id.setting) {
-                    intent = new Intent(getApplicationContext(), Settings_Activity.class);
+                    intent = new Intent(getApplicationContext(), SettingsActivity.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.slide_out_right);
                     return true;
                 }
                 else{
-                    intent = new Intent(getApplicationContext(), Kit_Activity.class);
+                    intent = new Intent(getApplicationContext(), KitActivity.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.slide_out_right);
                     return true;
@@ -102,7 +97,7 @@ public class Change_Password extends AppCompatActivity {
     public void onBackPressed() {
 
         super.onBackPressed();
-        Intent intent = new Intent(this, Login_Activity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();
