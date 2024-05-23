@@ -42,7 +42,6 @@ public class SettingsActivity extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Open gallery here
                 openGallery();
             }
         });
@@ -102,7 +101,6 @@ public class SettingsActivity extends AppCompatActivity {
 
         });
     }
-    //open gallery method
     private void openGallery() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent, REQUEST_PICK_IMAGE);
@@ -145,20 +143,6 @@ public class SettingsActivity extends AppCompatActivity {
         settingItemList.add(new SettingItem(R.drawable.icon9, "Terms of Use",R.drawable.ar));
         return settingItemList;
     }
-
-    private void showSelectCustomerDialog() {
-        Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.activity_customer_dialog);
-        RecyclerView recyclerViewCustomer = dialog.findViewById(R.id.recyclerViewcustomer);
-        EditText editTextSearch = dialog.findViewById(R.id.editTextSearch);
-        ImageView imageViewClear = dialog.findViewById(R.id.imageViewClear);
-        TextView buttondone=dialog.findViewById(R.id.buttonDone);
-        TextView buttonCancel = dialog.findViewById(R.id.buttonCancel);
-        SelectCustomer.initRecyclerView(this, recyclerViewCustomer, editTextSearch,buttondone,dialog,buttonCancel);
-        dialog.show();
-
-    }
-
     public static void updateSettingItem(String user) {
         if (settingItemList != null) {
             settingItemList.get(2).setText(user);

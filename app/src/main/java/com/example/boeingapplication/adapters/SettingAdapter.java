@@ -72,41 +72,57 @@ public class SettingAdapter extends RecyclerView.Adapter<SettingAdapter.SettingV
         }
 
         if (position == 2) {
-            holder.itemView.setOnClickListener(v -> {
-                Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.activity_customer_dialog);
-                EditText editTextSearch = dialog.findViewById(R.id.editTextSearch);
-                RecyclerView recyclerView = dialog.findViewById(R.id.recyclerViewcustomer);
-                ImageView imageViewClear = dialog.findViewById(R.id.imageViewClear);
-                TextView done=dialog.findViewById(R.id.buttonDone);
-                TextView cancel=dialog.findViewById(R.id.buttonCancel);
-                SelectCustomer.initRecyclerView(dialog.getContext(), recyclerView, editTextSearch,done,dialog,cancel);
-                editTextSearch.addTextChangedListener(new android.text.TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-                    @Override
-                    public void onTextChanged(CharSequence s, int start, int before, int count) {
-                        imageViewClear.setVisibility(s.length() > 0 ? View.VISIBLE : View.GONE);
-                    }
-                    @Override
-                    public void afterTextChanged(android.text.Editable s) {}
-                });
-                imageViewClear.setOnClickListener(view -> {
-                    editTextSearch.setText("");
-                    imageViewClear.setVisibility(View.GONE);
-                });
-                dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_background);
-                WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-                layoutParams.copyFrom(dialog.getWindow().getAttributes());
-                layoutParams.width =900 ;
-                layoutParams.height = 1400;
-                layoutParams.gravity = Gravity.CENTER;
-                RecyclerView recyclerView1 = dialog.findViewById(R.id.recyclerViewcustomer);
-                EditText searchInput = dialog.findViewById(R.id.editTextSearch);
-                SelectCustomer.initRecyclerView(dialog.getContext(), recyclerView1, searchInput,done,dialog,cancel);
-                dialog.show();
-                dialog.getWindow().setAttributes(layoutParams); // Apply the new attributes
-                dialog.setCanceledOnTouchOutside(false);
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Dialog dialog = new Dialog(context);
+                    dialog.setContentView(R.layout.activity_customer_dialog);
+
+                    EditText editTextSearch = dialog.findViewById(R.id.editTextSearch);
+                    RecyclerView recyclerView = dialog.findViewById(R.id.recyclerViewcustomer);
+                    ImageView imageViewClear = dialog.findViewById(R.id.imageViewClear);
+                    TextView done = dialog.findViewById(R.id.buttonDone);
+                    TextView cancel = dialog.findViewById(R.id.buttonCancel);
+                    SelectCustomer.initRecyclerView(dialog.getContext(), recyclerView, editTextSearch, done, dialog, cancel);
+                    editTextSearch.addTextChangedListener(new android.text.TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence s, int start, int before, int count) {
+                            imageViewClear.setVisibility(s.length() > 0 ? View.VISIBLE : View.GONE);
+                        }
+
+                        @Override
+                        public void afterTextChanged(android.text.Editable s) {
+                        }
+                    });
+                    imageViewClear.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            editTextSearch.setText("");
+                            imageViewClear.setVisibility(View.GONE);
+                        }
+                    });
+
+                    dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_background);
+
+                    WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
+                    layoutParams.copyFrom(dialog.getWindow().getAttributes());
+                    layoutParams.width = 900;
+                    layoutParams.height = 1400;
+                    layoutParams.gravity = Gravity.CENTER;
+
+                    RecyclerView recyclerView1 = dialog.findViewById(R.id.recyclerViewcustomer);
+                    EditText searchInput = dialog.findViewById(R.id.editTextSearch);
+
+                    SelectCustomer.initRecyclerView(dialog.getContext(), recyclerView1, searchInput, done, dialog, cancel);
+
+                    dialog.show();
+                    dialog.getWindow().setAttributes(layoutParams); // Apply the new attributes
+                    dialog.setCanceledOnTouchOutside(false);
+                }
             });
         }
   }

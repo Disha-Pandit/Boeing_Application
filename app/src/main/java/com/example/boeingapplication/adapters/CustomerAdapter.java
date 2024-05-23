@@ -32,6 +32,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Dialog
         this.userListFull = new ArrayList<>(userList);
         this.onUserClickListener = onUserClickListener;
     }
+
     @NonNull
     @Override
     public DialogViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -43,19 +44,19 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Dialog
     public void onBindViewHolder(@NonNull DialogViewHolder holder, int position) {
         String user = userList.get(position);
         holder.textViewUser.setText(user);
-        // Show/hide the right mark based on selection
         if (position == selectedPosition) {
             holder.imageViewRightMark.setVisibility(View.VISIBLE);
         } else {
             holder.imageViewRightMark.setVisibility(View.GONE);
         }
-
-        holder.itemView.setOnClickListener(v -> {
-            // Update the selected position
-            selectedPosition = holder.getAdapterPosition();
-            notifyDataSetChanged();
-            if(onUserClickListener !=null)// Notify adapter to refresh the views
-                onUserClickListener.onItemClick(user, holder.getAdapterPosition());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectedPosition = holder.getAdapterPosition();
+                notifyDataSetChanged();
+                if (onUserClickListener != null)
+                    onUserClickListener.onItemClick(user, holder.getAdapterPosition());
+            }
         });
     }
 

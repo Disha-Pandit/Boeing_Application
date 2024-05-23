@@ -44,16 +44,18 @@ public class SelectCustomer {
             });
         });
         recyclerView.setAdapter(adapter);
-        // Set up the search functionality
         searchInput.addTextChangedListener(new android.text.TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 adapter.filter(s.toString());
-                // Show/hide clear button based on search text
-                // Handle cancel button click
-                cancel.setOnClickListener(v -> dialog.dismiss());
+                cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
             }
             @Override
             public void afterTextChanged(android.text.Editable s) {}
