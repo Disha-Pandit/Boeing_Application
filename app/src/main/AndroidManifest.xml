@@ -21,6 +21,7 @@
         </activity>
         <activity
             android:name=".main_activitys.ChangePassword"
+            android:parentActivityName=".main_activitys.SettingsActivity"
             android:exported="true" />
         <activity
             android:name=".main_activitys.AcfrActivity"
