@@ -35,19 +35,12 @@ public class KitActivity extends AppCompatActivity {
         bnView.setSelectedItemId(R.id.kit);
         bnView.setLabelVisibilityMode(NavigationBarView.LABEL_VISIBILITY_LABELED);
         // kit
-
         RecyclerView recyclerView = findViewById(R.id.kitrecyclerView);
         GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
-
-
         List<KitItem> kitItem = prepareData();
-
-
         KitAdapter adapter = new KitAdapter(kitItem);
         recyclerView.setAdapter(adapter);
-
-
         bnView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
